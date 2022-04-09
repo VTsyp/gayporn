@@ -1,0 +1,562 @@
+body {
+  background-color: #CAC6F5;
+  font-size: 16px;
+  font-weight: 400; /*визуально в фигме шрифт кажется уже*/
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+}
+
+h1 {
+  font-size: 67px;
+  font-weight: 600px;
+  line-height: 100%;
+}
+
+a {
+  height: 100%;
+  cursor: pointer;
+}
+
+header {
+  background: linear-gradient(360deg, rgba(255, 255, 255, .4),   rgba(79, 97, 144, .5));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+header img {
+	display: flex;
+	position: absolute;
+	top: 10px;
+}
+
+header h2{
+	display: flex;
+	justify-content: center;
+	font-size: 16px;
+  font-weight: 400;
+
+}
+
+header button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 100px; /*текст съезжает, есть задаю высоту*/
+  margin-bottom: 70px;
+  background: linear-gradient(to right, rgba(215, 216, 244, 1),   rgba(79, 97, 144, .5));
+  border-radius: 170px;
+  border: none;
+  font-size: 109px;
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+
+.menu__btn {
+  display: flex; /* используем flex для центрирования содержимого */
+  align-items: center;  /* центрируем содержимое кнопки */
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 1;
+  top: 11px;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu__box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 143px 0;
+  text-align: center;
+  background-color: rgba(215, 216, 244, 1);
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+
+.menu__box a:hover {
+  color: #fff;
+}
+
+.menu__item {
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.menu__box button:hover {
+  background-color: rgba(79, 97, 144, 1);
+  border: none;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+}
+
+.menu__box {
+  transition-duration: 1s;
+}
+
+.menu__item {
+  transition-duration: .5s;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 67px;
+  line-height: 120%;
+  font-weight: 600;
+}
+
+.title a {
+  margin-top: 76px;
+  font-weight: 400;
+}
+
+.anim {
+ transition: 0.3s;
+}
+
+a:hover img{
+  transform: scale(1) translateX(0.3em) translateY(0px) !important;
+   transform: scale(2) translateX(0.3em) translateY(2px);
+}
+
+.anim:hover{
+  
+}
+
+
+
+.title img {
+  padding-left: 14px;
+}
+
+.section__image {
+  margin-top: 200px;
+}
+
+.section__image h2 {
+  font-size: 37px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  background: linear-gradient(180deg,rgba(255, 255, 255, 1),rgba(255, 255, 255, .5),rgba(255, 255, 255, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
+}
+
+.section__image p {
+  font-size: 21px;
+  letter-spacing: .05em;
+  background: linear-gradient(180deg,rgba(255, 255, 255, 1),rgba(255, 255, 255, .5),rgba(255, 255, 255, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section__image img {
+  width: 540px;
+  height: 807px;
+  object-fit: cover;  
+}
+
+.rightcol {
+  padding-top: 50px;
+}
+
+.section__image-one {
+  position: relative;
+  margin: 25px 0 25px 0;
+}
+.section__image-txt1 {
+  position: absolute;
+  padding: 30px;
+  color: #fff;  /*сделать градиент*/
+}
+
+.section__image-two {
+  position: relative;
+  margin: 25px 0 25px 0;
+}
+.section__image-txt2 {
+  position: absolute;
+  padding-top: 192px;
+  padding-left: 115px;
+  color: #fff;
+}
+
+.section__image-three {
+  position: relative;
+  margin: 25px 0 25px 0;
+}
+.section__image-txt3 {
+  position: absolute;
+  padding: 30px;
+  color: #fff;
+}
+
+.section__image-four {
+  position: relative;
+  margin: 25px 0 25px 0;
+}
+.section__image-txt4 {
+  position: absolute;
+  padding: 30px;
+  color: #fff;
+}
+
+.section__services {
+  
+}
+
+.section__services h5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.section__services p {
+  font-size: 21px;
+  line-height: 120%;
+  letter-spacing: .05em;
+  margin: 24px 0 89px 0;
+}
+
+.section__services-block {
+  display: flex;
+  justify-content: center;
+
+}
+
+.section__services-block img {
+
+}
+
+.section__services h4 {
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  line-height: 100%;
+  color: #172CEE;
+  padding: 44px 0 24px 0;
+}
+
+.section__services-block p {
+  font-size: 16px;
+  line-height: 190%;
+  letter-spacing: .05em;
+
+}
+
+.section__services-block-one {
+  display: grid;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.section__services-block-two {
+  display: grid;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.section__services-block-three {
+  display: grid;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+} 
+
+.section__services-conttacts {
+
+}
+
+.section__services-contacts h2 {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: .10em;
+  line-height: 100%;
+  padding-bottom: 8px;
+}
+
+.section__services-contacts h3 {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.1em;
+  /*padding-top: 36px;*/
+}
+
+.section__services-contacts a {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: .05em;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.social-flex {
+  margin-bottom: 36px;
+}
+
+.section__services-follow-wrap {
+
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-top: 50px;
+  row-gap: 50px;
+  padding-right: 175px;
+
+}
+
+li {
+  width: 33%;
+}
+
+li :hover {
+ /* -webkit-transition: -webkit-transform .2s;
+transition: -webkit-transform .2s;
+transition: transform .2s;*/
+transition: transform .2s,-webkit-transform .2s;
+}
+
+.socials {
+  list-style: none;
+  cursor: pointer;
+}
+
+.socials li {
+  /*position: relative;*/
+}
+
+.socials a{
+  /*position: absolute;*/
+  width: 40px;
+  height: 40px;
+}
+
+.socials img {
+  /*position: absolute;*/
+  width: 40px;
+  height: 40px;
+}
+
+.new-copy {
+  display: flex;
+  flex-direction: column;
+  position: absolute;  
+  bottom: 100px;
+}
+
+.new-copy p {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: .02em;
+  color: #837C7C;
+  padding-bottom: 40px;
+}
+
+.disable-mobile {         /*отключить на мобиле*/
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: .1em;
+}
+
+.contact-form h3{ /*если задаю через класс, который задал h2,3 
+  то стили идут только на один*/
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: .1em;
+}
+
+.contact-form h2{
+  font-size: 37px;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: .07em;
+}
+
+.contact-form .servh3 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 100%;
+  margin-bottom: 35px;
+  margin-top: 10px;
+}
+
+.contact-form input {
+  border: 0;
+  border-bottom: solid 1px;
+  background-color: #CAC6F5;
+  /*margin-bottom: 10px;*/
+  /*padding-bottom: 5px;*/
+  color: #000;
+  width: 255px;
+  outline: none;
+}
+
+
+.contact-form input:hover {
+  color: #142BF4; /*сделать, чтобы при нажатии name уезжал наверх*/
+}
+
+.file-select {
+ width: 670px;
+}
+
+.contact-row {
+ /* display: flex;
+  justify-content: space-around;*/
+}
+
+.contact-row2 {
+  /*position: absolute;*/
+}
+
+.contact-row2 button{
+  position: relative;
+  left: 80px;
+}
+
+.col-auto button{
+  width: 255px;
+  height: 50px;
+  border-radius: 40px;
+  background-color: #fff;
+  font-size: 16px;
+  font width: 400;
+  letter-spacing: .05em;
+  line-height: 100%;
+  margin-bottom: 40px;
+  border: none;
+  filter: drop-shadow(0px 2px 9px rgba(0, 0, 0, 0.12));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-auto .more50 {
+  width: 365px;
+
+}
+
+.col-auto button:hover {
+  border: solid 2px rgba(20, 43, 244, 1);
+}
+
+.data-input {
+    display: flex;
+    flex-wrap: wrap;
+    /*margin-bottom: 30px;*/
+}
+
+.for-input {
+  position: relative;
+  /*margin-right: 30px;*/
+  margin: 50px 30px 50px 0;
+}
+
+.no-empty {
+  top: -25px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 12px ;
+/*  сделать, чтобы при фокусе или объекте в инпуте, добавлялся
+  этот класс. когда инпут не в фокусе или без текста, 
+  класс не нужен.*/
+}
+
+
+.placeholder {
+  position: absolute;
+}
+
+.for-input .file-select {
+  width: 540px;
+}
+
+.send {
+  width: 305px;
+  height: 65px;
+  border-radius: 15px;
+  border: solid 2px rgba(23, 44, 238, 1);
+  background: none;
+  color: rgba(23, 44, 238, 1);
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: .1em;
+  position: static !important;
+  margin-bottom: 100px;
+}
+
+
